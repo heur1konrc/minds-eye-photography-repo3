@@ -12,9 +12,10 @@ cmds = [
 [phases.build]
 cmds = [
     "mkdir -p src/static",
-    "cp -r frontend/dist/* src/static/"
+    "cp -r frontend/dist/* src/static/",
+    "ls -la src/static/",
+    "ls -la src/static/assets/ || echo 'No assets directory found'"
 ]
 
 [start]
 cmd = "gunicorn --bind 0.0.0.0:$PORT wsgi:app"
-
