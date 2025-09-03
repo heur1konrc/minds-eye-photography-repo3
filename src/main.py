@@ -59,7 +59,7 @@ app.register_blueprint(enhanced_bg_bp)
 from src.routes.slideshow_fix import slideshow_fix_bp
 app.register_blueprint(slideshow_fix_bp)  # New slideshow fix
 # app.register_blueprint(slideshow_manager_bp)  # Temporarily disabled for deployment fix
-# app.register_blueprint(portfolio_mgmt_bp)  # Removed - redundant with admin dashboard
+app.register_blueprint(portfolio_mgmt_bp)  # portfolio API endpoints
 # app.register_blueprint(contact_bp)  # Temporarily disabled
 
 # Database configuration - Use persistent volume for database
